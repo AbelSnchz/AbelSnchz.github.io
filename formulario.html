@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto final - Formulario</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat&display=swap">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+      <h1 style="text-align: center;">Formulario de contacto</h1>
+        <form onsubmit="MostrarDatos()">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required autofocus>
+
+            <label for="ape">Apellidos:</label>
+            <input type="text" id="ape" name="ape">
+
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="10" placeholder="Si estás interesado, dejame una reseña" required></textarea>
+
+            <button type="submit">Enviar</button>
+            <a class="botón" href="index.html">Volver al currículum</a>
+        </form>
+    </div>
+
+    <script>
+        function MostrarDatos() {
+            var nombre = document.getElementById('nombre').value;
+            var ape = document.getElementById('ape').value;
+            var email = document.getElementById('email').value;
+            var mensaje = document.getElementById('mensaje').value;
+
+            var message = "Nombre: " + nombre + "\n";
+            message += "Apellidos: " + ape + "\n";
+            message += "Correo Electrónico: " + email + "\n";
+            message += "Mensaje: " + mensaje;
+
+            alert(message);
+        }
+    </script>
+
+
+
+
+</body>
+</html>
